@@ -5,10 +5,6 @@
 
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -25,16 +21,12 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="overlay">
-                <h1>Welkom</h1>
-                <a href="bestellingen.php">our products</a>
-            </div>
-        </section>
+        <form>
+            
+        </form>
         <audio autoplay loop hidden>
             <source src="audios/funky town low quality.mp3" type="audio/mpeg">
         </audio>        
-        <button onclick="document.querySelector('audio').play()">Enable Audio</button>
     </main>
       
 
@@ -46,6 +38,8 @@
 
 </body>
 </html>
+
+
 
 <style>
     /* Algemene stijlen */
@@ -75,43 +69,6 @@ header {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-}
-
-/* Hero sectie */
-.hero {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 100px); /* Houdt rekening met header en footer */
-    background: url('background-image.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.overlay {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.overlay h1 {
-    font-size: 2rem;
-    color: #1F2A60;
-}
-
-.overlay button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    background-color: #1F2A60;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.overlay button:hover {
-    background-color: #3243A0;
 }
 
 footer {
