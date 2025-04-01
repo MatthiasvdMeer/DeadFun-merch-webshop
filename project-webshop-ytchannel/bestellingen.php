@@ -1,34 +1,35 @@
-<?php
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheDeadTrio</title>
+    <link rel="stylesheet" href="webshop.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/yt logo.png" alt="Profielafbeelding">
+            <img src="images/yt logo.png" alt="profielafbeelding">
             <span>TheDeadTrio</span>
         </div>
     </header>
 
+
+
     <main>
-        <form>
-            
-        </form>
-        <audio autoplay loop hidden>
-            <source src="audios/funky town low quality.mp3" type="audio/mpeg">
-        </audio>        
+        <section class="hero">
+            <div class="overlay">
+            <?php
+    include 'functions.php';
+    Crudbestellingen();
+    ?>
+       
+        </section>
     </main>
-      
+
+    <div class="spotify-container">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4LDmgup1WapxhhO4O7C03V?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
 
     <footer>
         <p>click on the link below to find our yt channel</p>
@@ -39,19 +40,17 @@
 </body>
 </html>
 
-
-
 <style>
-    /* Algemene stijlen */
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: darkblue;
-    background-image: url(images/yt\ logo.png);
+    background-image: url('images/yt logo.png');
 }
 
-/* Header */
+
 header {
     display: flex;
     align-items: center;
@@ -71,13 +70,68 @@ header {
     border-radius: 50%;
 }
 
-footer {
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px); / Houdt rekening met header en footer */
+    background: url('img/yt logo.png') center/cover no-repeat;
     display: flex;
-    flex-direction: column; /* Stapel items verticaal */
-    justify-content: center; /* Centreer verticaal */
-    align-items: center; /* Centreer horizontaal */
-    background-color: #A8B2FF;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0.6); 
+    padding: 10px;
+    border-radius: 15px;
     text-align: center;
 }
+
+.overlay h1 {
+    font-size: 2rem;
+    color: #1F2A60;
+}
+
+.overlay button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #1F2A60;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background-color: #3243A0;
+}
+
+footer {
+
+    bottom: 0;
+    left: 0;
+    width: 98.98%;
+    background-color: #A8B2FF;
+    text-align: center;
+    padding: 10px;
+}
+
+.spotify-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 80px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
 
 </style>
